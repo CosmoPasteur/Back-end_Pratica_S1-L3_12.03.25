@@ -1,34 +1,20 @@
 package esercizio_1;
 
 public class Rettangolo {
+    private double altezza;
+    private double larghezza;
 
-    private int base;
-    private int altezza;
-
-    public int getBase() {
-        return base;
+    public Rettangolo(double alt, double larg) {
+        this.altezza = alt;
+        this.larghezza = larg;
     }
 
-    public void setBase(int base) {
-        this.base = base;
+    public double area() {
+        return altezza * larghezza;
     }
 
-    public int getAltezza() {
-        return altezza;
+    public double perimetro() {
+        return (altezza + larghezza) * 2;
     }
 
-    public void setAltezza(int altezza) {
-        this.altezza = altezza;
-    }
-
-    public void perimetro(int base, int altezza) {
-
-        int risultato = (base + altezza) *2;
-
-        System.out.println(risultato);
-    }
-
-    public void area(int base, int altezza){
-        int risut
-    }
 }

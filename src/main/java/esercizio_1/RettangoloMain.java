@@ -3,20 +3,39 @@ package esercizio_1;
 import java.util.Scanner;
 
 public class RettangoloMain {
-    public static void main(String[] args){
-        Rettangolo retta1 = new Rettangolo();
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Inserisci Base");
-        retta1.setBase(Scanner.nextInt());
-        System.out.println("Inserisci Altezza");
-        retta1.setAltezza(Scanner.nextInt());
-        System.out.println("Perimetro :");
-        retta1.perimetro(retta1.getBase(), retta1.getAltezza());
-        System.out.println("Area");
-        retta1.area(retta1.getBase(), retta1.getAltezza());
+        public static void main(String[] args) {
+            System.out.println("*********** Stampa rettangolo ***********");
+            Rettangolo r1 = new Rettangolo(20, 5.7);
+            stampaRettangolo(r1);
+            System.out.println("*********** Stampa due rettangoli ***********");
+            Rettangolo r2 = new Rettangolo(12, 40.2);
+            stampaDueRettangoli(r1, r2);
+        }
 
-        retta1.perimetro(retta1.getBase(), retta1.getAltezza());
+        public static void stampaRettangolo(Rettangolo rettangolo) {
+            System.out.println("Perimetro rettangolo: " + rettangolo.perimetro());
+            System.out.println("Area rettangolo: " + rettangolo.area());
+        }
 
-    }
+        public static void stampaDueRettangoli(Rettangolo rettangolo1, Rettangolo rettangolo2) {
+
+            System.out.println("Rettangolo 1: ");
+            stampaRettangolo(rettangolo1);
+
+            System.out.println("Rettangolo 2: ");
+            stampaRettangolo(rettangolo2);
+
+            double sommaAree = rettangolo1.area() + rettangolo2.area();
+            double sommaPerimetri = rettangolo1.perimetro() + rettangolo2.perimetro();
+
+            System.out.println("Somma perimetri: ");
+            System.out.println(sommaPerimetri);
+
+            System.out.println("Somma aree: ");
+            System.out.println(sommaAree);
+
+        }
+
+
 }
