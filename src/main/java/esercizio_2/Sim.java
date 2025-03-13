@@ -7,7 +7,7 @@ public class Sim {
     String[] ultimeChiamate;
 
     //Metodo costruttore
-    public Sim(int numeroTelefono, double creditoResiduo, String ultimeChiamate) {
+    public Sim(long numeroTelefono, double creditoResiduo, String ultimeChiamate) {
         this.numeroTelefono = numeroTelefono;
         this.creditoResiduo = creditoResiduo;
         this.ultimeChiamate = new String[]{ultimeChiamate};
